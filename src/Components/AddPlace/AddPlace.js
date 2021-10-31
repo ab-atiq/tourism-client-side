@@ -8,7 +8,7 @@ const AddPlace = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/places', data)
+        axios.post('https://scary-vampire-35450.herokuapp.com/places', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully.');

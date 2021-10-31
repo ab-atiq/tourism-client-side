@@ -4,7 +4,7 @@ import './Accommodation.css'
 const Accommodation = () => {
     const [accommodations, setAccommodations] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/accommodations')
+        fetch('https://scary-vampire-35450.herokuapp.com/accommodations')
             .then(res => res.json())
             .then(data => setAccommodations(data))
     }, [])

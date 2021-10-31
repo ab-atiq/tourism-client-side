@@ -6,7 +6,7 @@ const PlaceDetails = () => {
     const [place, setPlace] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/places')
+        fetch('https://scary-vampire-35450.herokuapp.com/places')
             .then(res => res.json())
             .then(data => {
                 const matchedPlace = data.find(singlePlace => singlePlace._id === single_place)
