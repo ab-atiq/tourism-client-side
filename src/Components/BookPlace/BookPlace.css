@@ -1,0 +1,13 @@
+.book-place form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.book-place form input {
+    width: 50%;
+    margin: 5px auto;
+}
+.book-place form textarea{
+    width: 50%;
+    margin: 10px auto;
+}

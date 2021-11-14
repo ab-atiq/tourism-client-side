@@ -1,9 +1,16 @@
 .places-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 15px;
+    grid-gap: 25px;
     
 }
 .place-container{
     border: 2px solid blue;
+}
+@media only screen and (max-width:1000px) {
+    .places-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 15px;
+    }
 }

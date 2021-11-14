@@ -1,18 +1,18 @@
-.accommodation-container{
+.order-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
-.single-accommodation{
+.sub-order-container{
     border: 2px solid blue;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 @media only screen and (max-width:1000px) {
-    .accommodation-container{
+    .order-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        grid-gap: 10px;
+        grid-gap: 30px;
     }
 }

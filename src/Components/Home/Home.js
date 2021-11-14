@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
-import AboutUs from '../AboutUs/AboutUs';
 import Accommodation from '../Accommodation/Accommodation';
 import Places from '../Places/Places';
+import SpecialServices from '../SpecialServices/SpecialServices';
 import './Home.css'
 const Home = () => {
     return (
@@ -67,7 +67,7 @@ const Home = () => {
             </div>
             <Places></Places>
             <Accommodation></Accommodation>
-            <AboutUs></AboutUs>
+            <SpecialServices></SpecialServices>
         </div>
     );
 };

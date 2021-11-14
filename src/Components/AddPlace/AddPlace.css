@@ -1,10 +1,10 @@
-.form-container{
+.add-place .form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.form-container input, textarea{
+.add-place .form-container input, textarea{
     width: 40%;
     margin-bottom: 10px;
 }

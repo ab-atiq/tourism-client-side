@@ -10,10 +10,10 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Places from './Components/Places/Places';
 import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
-import ManagePlaces from './Components/ManagePlaces/ManagePlaces';
 import AddPlace from './Components/AddPlace/AddPlace';
-import Accommodation from './Components/Accommodation/Accommodation';
-import AboutUs from './Components/AboutUs/AboutUs';
+import MyOrders from './Components/MyOrders/MyOrders';
+import ManageAllOrders from './Components/ManageAllOrders/ManageAllOrders';
+import BookPlace from './Components/BookPlace/BookPlace';
 
 
 function App() {
@@ -36,18 +36,21 @@ function App() {
             <PrivateRoute path='/places/:single_place'>
               <PlaceDetails></PlaceDetails>
             </PrivateRoute>
-            <Route path='/manageplaces'>
-              <ManagePlaces></ManagePlaces>
-            </Route>
+            <PrivateRoute exact path='/bookPlace'>
+              <BookPlace></BookPlace>
+            </PrivateRoute>
+            <PrivateRoute path='/bookPlace/:accommodationId'>
+              <BookPlace></BookPlace>
+            </PrivateRoute>
             <PrivateRoute path='/addplace'>
               <AddPlace></AddPlace>
             </PrivateRoute>
-            <Route path='/accommodation'>
-              <Accommodation></Accommodation>
-            </Route>
-            <Route path='/aboutUs'>
-              <AboutUs></AboutUs>
-            </Route>
+            <PrivateRoute path='/manageOrders'>
+              <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
+            <PrivateRoute path='/myOrders'>
+              <MyOrders></MyOrders>
+            </PrivateRoute>
             <Route path='/logIn'>
               <LogIn></LogIn>
             </Route>

@@ -1,0 +1,44 @@
+[
+    {
+        "servie_id": "1",
+        "service": "Ambulance",
+        "image": "https://i.ibb.co/x1yPgrv/home-5-acc-img.jpg",
+        "shortDescriptionTitle": "Scottish Ambulance Service",
+        "shortDescription": "The Scottish Ambulance Service is on the frontline of the NHS, despatching immediate medical assistance or clinical advice to over 5 million people across Scotland. Our aim is to offer the highest level of care to our patients as we preserve life and promote recovery, with our skilled workforce bringing care and compassion to those who need it most."
+    },
+    {
+        "servie_id": "2",
+        "service": "Airplane Service",
+        "image": "https://i.ibb.co/QMRFcCt/comair-787800-delivery-400x225.jpg",
+        "shortDescriptionTitle": "Air medical services",
+        "shortDescription": "Air medical services is a comprehensive term covering the use of air transportation, aeroplane or helicopter, to move patients to and from healthcare facilities and accident scenes. Personnel provide comprehensive prehospital and emergency and critical care to all types of patients during aeromedical evacuation or rescue operations aboard helicopter and propeller aircraft or jet aircraft."
+    },
+    {
+        "servie_id": "3",
+        "service": "Buses support",
+        "image": "https://media.hitfull.com/article/images/7-Star-Luxury-Bus-Service-in-India.jpg",
+        "shortDescriptionTitle": "Scottish Buses support",
+        "shortDescription": "Buses support lower transport emissions to help the planet and clean up toxic air, more dense housebuilding to increase supply in unaffordable cities and avoid sprawl; and ensure that every member of the community has more equal access to public services and support, and friends and family that poor transport denies."
+    },
+    {
+        "servie_id": "4",
+        "service": "Health Service",
+        "image": "https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?size=626&ext=jpg&ga=GA1.2.1619591905.1631232000",
+        "shortDescriptionTitle": "Scottish Medical Service",
+        "shortDescription": "Detect potentially life-threatening health conditions or diseases early. Increase chances for treatment and cure. Limit risk of complications by closely monitoring existing conditions. Increase lifespan and improve health."
+    },
+    {
+        "servie_id": "5",
+        "service": "Swimming Pool",
+        "image": "https://www.the-pool.com/wp-content/uploads/2020/03/sw-780x456.jpg",
+        "shortDescriptionTitle": "Swimming - health benefits",
+        "shortDescription": "Swimming is one of the most popular sports in Australia. Our nation is surrounded by water and swimming is one of our great passions. As well as being fun, swimming is a great way to keep fit, stay healthy and make friends.Swimming is a healthy activity that you can continue for a lifetime. It is a low-impact activity that has many physical and mental health benefits."
+    },
+    {
+        "servie_id": "6",
+        "service": "Food Service Management",
+        "image": "https://www.ecpi.edu/sites/default/files/Untitled%20design_20.png",
+        "shortDescriptionTitle": "Importance of Food Service Management",
+        "shortDescription": "FSMs use their organizational and interpersonal skills to keep customer satisfaction high while operating costs stay low. It’s estimated that the average restaurant only lasts about five years. While many factors influence the success or failure of a business, good management practices reduce the likelihood of failure for new diners in many ways."
+    }
+]
