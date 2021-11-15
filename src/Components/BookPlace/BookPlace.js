@@ -14,7 +14,7 @@ const BookPlace = () => {
     const [purchaseInfo, setPurchaseInfo] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/accommodations')
+        fetch('https://scary-vampire-35450.herokuapp.com/accommodations')
             .then(res => res.json())
             .then(data => {
                 const matchedProduct = data.find(sinPro => sinPro._id === accommodationId)
@@ -39,7 +39,7 @@ const BookPlace = () => {
         information.email=user.email;
         console.log(information);
         // send to the server
-        fetch('http://localhost:5000/orders', {
+        fetch('https://scary-vampire-35450.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

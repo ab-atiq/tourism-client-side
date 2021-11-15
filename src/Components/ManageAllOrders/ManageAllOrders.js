@@ -4,7 +4,7 @@ import SubManageAllOrders from './SubManageAllOrders';
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://scary-vampire-35450.herokuapp.com/orders`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, []);
