@@ -8,10 +8,10 @@ const BookPlace = () => {
     const { accommodationId } = useParams();
     const [accomodation, setAccomodation] = useState({});
     // accomodation id can not get first
-    const initialInfo = { accommodationId: accomodation?._id, buyerName: user.displayName, email: user.email, phone: '' };
+    // const initialInfo = { fullItem: accomodation?.title, buyerName: user?.displayName, email: user?.email, phone: '' };
     // const initialInfo = { buyerName: user.displayName };
-    console.log(initialInfo);
-    const [purchaseInfo, setPurchaseInfo] = useState(initialInfo);
+    // console.log(initialInfo);
+    const [purchaseInfo, setPurchaseInfo] = useState({});
 
     useEffect(() => {
         fetch('http://localhost:5000/accommodations')
@@ -20,7 +20,7 @@ const BookPlace = () => {
                 const matchedProduct = data.find(sinPro => sinPro._id === accommodationId)
                 setAccomodation(matchedProduct)
             });
-    }, []);
+    }, [accommodationId]);
 
 
     const handleOnBlur = e => {
@@ -28,15 +28,18 @@ const BookPlace = () => {
         const value = e.target.value;
         const newInfo = { ...purchaseInfo };
         newInfo[field] = value;
-        console.log(newInfo);
+        // console.log(newInfo);
         setPurchaseInfo(newInfo);
     }
 
     const handlePurchaseSubmit = e => {
-        const information = { ...purchaseInfo };
+        accomodation.accId=accomodation._id;
+        delete accomodation._id;
+        const information = { ...accomodation };
+        information.email=user.email;
         console.log(information);
         // send to the server
-        fetch('http://localhost:5000/buyers', {
+        fetch('http://localhost:5000/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -60,8 +63,8 @@ const BookPlace = () => {
             <h1>{accomodation?.title}</h1>
             <img style={{ width: '200px' }} src={accomodation?.image} alt="" />
             <form onSubmit={handlePurchaseSubmit}>
-                <label>Accommodation ID:</label>
-                <input type="text" onBlur={handleOnBlur} defaultValue={accomodation?._id} name='accommodationId' disabled />
+                <label>Accommodation Title:</label>
+                <input type="text" onBlur={handleOnBlur} defaultValue={accomodation?.title} name='fullItem' disabled />
                 <label>Name:</label>
                 <input type="text" onBlur={handleOnBlur} defaultValue={user.displayName} name='buyerName' />
                 <label>Email:</label>

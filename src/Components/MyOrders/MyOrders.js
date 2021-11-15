@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import SubMyOrders from './SubMyOrders';
+import './MyOrders.css';
+import useAuth from '../../Hooks/useAuth';
 
 const MyOrders = () => {
-    const [products, setProducts] = useState([]);
+    const [orders, setOrders] = useState([]);
+    const { user } = useAuth();
     useEffect(() => {
-        fetch('')
+        fetch(`http://localhost:5000/orders?email=${user.email}`)
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => setOrders(data));
     }, []);
     return (
-        <div className='container'>
-            <h1>My Orders</h1>
+        <div className='container py-3'>
+            <h1 className='text-primary'>My Orders</h1>
             <div className='order-container'>
                 {
-                    products.map(product => <SubMyOrders key={product._id} product={product} products={products} setProducts={setProducts} ></SubMyOrders>)
+                    orders.map(order => <SubMyOrders key={order._id} order={order} orders={orders} setOrders={setOrders} ></SubMyOrders>)
                 }
             </div>
         </div>

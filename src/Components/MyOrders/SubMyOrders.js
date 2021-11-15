@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import useAuth from '../../Hooks/useAuth';
 
-const SubMyOrders = ({ product, products, setProducts }) => {
-    const { _id, name, image } = product;
-
+const SubMyOrders = ({ order, orders, setOrders }) => {
+    const { _id, title, image } = order;
+    const {user}=useAuth();
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = ``;
+            const url = `http://localhost:5000/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -16,8 +17,8 @@ const SubMyOrders = ({ product, products, setProducts }) => {
                     console.log(data);
                     if (data.deletedCount > 0) {
                         alert('Deleted Successfully.');
-                        const remainingProducts = products.filter(product => product._id !== id);
-                        setProducts(remainingProducts);
+                        const remainingOrders = orders.filter(product => product._id !== id);
+                        setOrders(remainingOrders);
                     }
                 })
         }
@@ -25,8 +26,10 @@ const SubMyOrders = ({ product, products, setProducts }) => {
 
     return (
         <div className='sub-order-container'>
-            <h2>{name}</h2>
+            <h2>{title}</h2>
             <img className='img-fluid my-4' src={image} alt="" />
+            <br/>
+            <h6>Email:{user.email}</h6>
             <Button onClick={() => handleDelete(_id)}>Delete</Button>
         </div>
     );
