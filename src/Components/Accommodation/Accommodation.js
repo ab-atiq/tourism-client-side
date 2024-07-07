@@ -6,7 +6,7 @@ import './Accommodation.css'
 const Accommodation = () => {
     const [accommodations, setAccommodations] = useState([]);
     useEffect(() => {
-        fetch('https://scary-vampire-35450.herokuapp.com/accommodations')
+        fetch('https://tourism-server-side-9pz5.onrender.com/accommodations')
             .then(res => res.json())
             .then(data => setAccommodations(data))
     }, [])
